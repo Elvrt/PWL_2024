@@ -80,3 +80,11 @@ Route::resource('photos', PhotoController::class) -> only(['index', 'show']);
 
 
 Route::resource('photos', PhotoController::class)->except(['create', 'store', 'update', 'destroy' ]);
+
+// Route::get('/greeting', function(){
+//     return view('blog.hello',['name' => 'Elva']);
+// });
+
+Route::get('/greeting', [WelcomeController::class,'greeting']); 
+
+
